@@ -13,9 +13,9 @@ playSound =
     buffer1 <- createBuffer $ Sine 440 0 1
     buffer2 <- createBuffer HelloWorld
     [source] <- genObjectNames 1
-    queueBuffers source [buffer1,buffer2]
+    queueBuffers source (take 10 $ cycle [buffer1, buffer2])
     play [source]
-    sleep 4
+    sleep 60
     closeDevice device
     return ()
 
