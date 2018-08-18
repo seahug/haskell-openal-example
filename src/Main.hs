@@ -10,8 +10,8 @@ playSound =
     (Just device) <- openDevice Nothing
     (Just context) <- createContext device []
     currentContext $= Just context
-    buffer1 <- createBuffer $ Sine 440 0 1
-    buffer2 <- createBuffer HelloWorld
+    buffer1 <- createBuffer $ Sine 880 0 1
+    buffer2 <- createBuffer $ Square 440 0 1
     [source] <- genObjectNames 1
     queueBuffers source (take 10 $ cycle [buffer1, buffer2])
     play [source]
