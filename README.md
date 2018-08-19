@@ -31,4 +31,11 @@ One possible problem ([see][stack-overflow]) can be addressed by modifying `/etc
 brew install alut
 ```
 
+## Build and run
+
+```bash
+stack build --fast
+stack exec play-sound
+```
+
 [stack-overflow]: https://stackoverflow.com/questions/39167975/no-sound-with-haskell-openal
